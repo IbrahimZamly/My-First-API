@@ -68,7 +68,7 @@ router.delete('/news/:id',auth,async(req,res)=>{
         if(!news){
             return res.status(400).send('No News Found')
         }
-        res.send('Deleted')
+        res.send(news)
     }catch(e){
         res.status(500).send(e)
     }
